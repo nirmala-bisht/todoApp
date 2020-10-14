@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-   
+<%- include("header") -%>   
     <div class="box1" id="heading">
        
         <h1>Todo List</h1>
@@ -15,7 +6,7 @@
         
         <div class="box">
      
-     <!---  <% for(var i=0;i<newListItems.lengths;i++){ %>-->
+      <% for(var i=0;i<newListItems.length;i++){ %>
          <form action="/" method="post">
          <div class="item">
              <div class="round">
@@ -23,12 +14,12 @@
             
              <label for="checkbox"></label>
              </div>
-            <!--- <p><%= newListItems[i] %></p>-->
+            <p><%= newListItems[i] %></p>
             <br>
          </div>
          
          </form>
-      <!--<% } %>-->
+      <% } %>
         <!--- <form >
          <div class="item">
              <div class="round">
@@ -82,8 +73,8 @@
          </form>-->
       
      
-        <form class="item" >
-         <input type="text"  placeholder="new"><hr>
+        <form class="item" action="/" method="post">
+         <input type="text" name="n"  placeholder="new task"><hr>
          <button id="b" type="submit" <span id="s2"></span>Add Task</span></button> 
      </form>
     </div>
